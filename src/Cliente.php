@@ -1,5 +1,4 @@
 <?php
-
 // * - Criando a class(classe) "Cliente" via PHP - * 
 // Obs. Classes SEMPRE começam com a letra maiuscula.
 class Cliente {
