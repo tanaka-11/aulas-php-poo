@@ -20,17 +20,18 @@
     </ul>
 
 <?php 
-    // Importando a Classe:
+    //- Importando a Classe -
     require_once 'src/Cliente.php'; 
 
-    // Criando Instâncias da Classe(Objetos):
-    $clienteA = new Cliente;
-    $clienteB = new Cliente;
-    // Passamos o comando new para criar objetos a partir da nossa classe Cliente.
+    //- Criando Instâncias da Classe(Objetos) -
+    // Obs*. Passamos o comando new para criar objetos a partir da nossa classe Cliente.
+        $A = new Cliente;
+        $B = new Cliente;
+   
 
 ?>
-
-    <pre><?=var_dump($clienteA, $clienteB)?></pre>
+    <!-- -Teste- -->
+    <pre><?=var_dump($A, $B)?></pre>
 
 </body>
 </html>
