@@ -13,23 +13,36 @@
     <hr>
 
     <h2>Assuntos abordados:</h2>
+    
     <ul>
-        <li>Acesso direto às propriedades</li>
-        <li>Atribuição e leitura de dados</li>
-        <li>Chamada de método(fuction)</li>
+        <li>
+            Acesso direto às propriedades
+        </li>
+
+        <li>
+            Atribuição e leitura de dados
+        </li>
+
+        <li>
+            Chamada de método(fuction)
+        </li>
     </ul>
 
 <?php 
-    // require_once 'src/Cliente.php'; 
-
-    // $A = new Cliente;
-    // $B = new Cliente;
+    require_once 'src/Cliente.php';
+    
+    $A = new Cliente;
+    $B = new Cliente; 
   
     // Acessando e Atribuindo dados.
+    // Nomes
     $A -> nome = "Marina Tanaka";
-    $B -> nome = "Luis Fernando";
+    $B-> nome = "Luis Fernando";
 
+    // Telefones
     $A -> telefones = ["11-2135-0300", "1198681-7759"];
+
+    // Email
     $A -> email = "mtanakasg@gmail.com";
     $A -> senha = password_hash("batata_quente", PASSWORD_DEFAULT)
 ?>
@@ -39,11 +52,14 @@
         <!-- 1ª Versão
             *Obs. (Utilizamos (->) para atribuir o valor, ou seja, a variavel A está recebendo o valor "Marina Tanaka") 
         -->
-            <h3> <?= $A -> nome ?> </h3>
+            <h3> <?= $A->nome ?> </h3>
         
             <!-- 2ª Versão simplificada -->
             <h3><?=$B->nome?></h3>
-
+    <hr>
+    <!-- Teste -->
+    <h3>Teste</h3>
+    <pre><?=var_dump($A, $B)?></pre>        
 </body>
 
 </html>
