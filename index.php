@@ -24,6 +24,7 @@
     require_once 'src/Cliente.php'; 
 
     //- Criando Instâncias da Classe(Objetos) -
+    
     // Obs*. Passamos o comando new para criar objetos a partir da nossa classe Cliente.
         $A = new Cliente;
         $B = new Cliente;
