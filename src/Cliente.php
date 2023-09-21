@@ -6,4 +6,9 @@ class Cliente {
     public string $email;
     public string $senha;
     public array $telefones;
+
+    // Criando Métodos(Comportamentos) baseados nos dados do diagrama:
+    public function exibirDados():void {
+        
+    }
 }
