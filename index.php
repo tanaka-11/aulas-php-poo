@@ -20,29 +20,30 @@
     </ul>
 
 <?php 
-    // Importando a Classe:
-    require_once 'src/Cliente.php'; 
+    // require_once 'src/Cliente.php'; 
 
-    // Criando Instâncias da Classe(Objetos):
-    $clienteA = new Cliente;
-    $clienteB = new Cliente;
-    // Passamos o comando new para criar objetos a partir da nossa classe Cliente.
-
-
+    // $A = new Cliente;
+    // $B = new Cliente;
+  
     // Acessando e Atribuindo dados.
-    $clienteA -> nome = "Marina Tanaka";
-    $clienteB -> nome = "Luis Fernando";
+    $A -> nome = "Marina Tanaka";
+    $B -> nome = "Luis Fernando";
 
-    $clienteA -> telefones = ["11-2135-0300", "1198681-7759"];
-    $clienteA -> email = "mtanakasg@gmail.com";
-    $clienteA -> senha = password_hash("batata_quente", PASSWORD_DEFAULT)
+    $A -> telefones = ["11-2135-0300", "1198681-7759"];
+    $A -> email = "mtanakasg@gmail.com";
+    $A -> senha = password_hash("batata_quente", PASSWORD_DEFAULT)
 ?>
     <hr>
 
-    <h2>Dados dos objetos (Acesso e Leitura dos dados)</h2>
-    <h3> <?= $clienteA -> nome ?> </h3>
-    <h3><?=$clienteB->nome?></h3>
+    <h2> Dados dos objetos (Acesso e Leitura dos dados) </h2>
+        <!-- 1ª Versão
+            *Obs. (Utilizamos (->) para atribuir o valor, ou seja, a variavel A está recebendo o valor "Marina Tanaka") 
+        -->
+            <h3> <?= $A -> nome ?> </h3>
+        
+            <!-- 2ª Versão simplificada -->
+            <h3><?=$B->nome?></h3>
 
-    <pre><?=var_dump($clienteA, $clienteB)?></pre>
 </body>
+
 </html>
