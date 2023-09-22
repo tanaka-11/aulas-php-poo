@@ -37,13 +37,15 @@
     // Acessando e Atribuindo dados.
     // Nomes
     $A -> nome = "Marina Tanaka";
-    $B-> nome = "Luis Fernando";
+    $B -> nome = "Luis Fernando";
 
     // Telefones
     $A -> telefones = ["11-2135-0300", "1198681-7759"];
 
     // Email
     $A -> email = "mtanakasg@gmail.com";
+    
+    // Criptografando a senha com "passoword_hash"
     $A -> senha = password_hash("batata_quente", PASSWORD_DEFAULT)
 ?>
     <hr>
