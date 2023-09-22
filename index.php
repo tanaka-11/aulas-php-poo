@@ -54,7 +54,7 @@
         <!-- 1ª Versão
             *Obs. (Utilizamos (->) para atribuir o valor, ou seja, a variavel A está recebendo o valor "Marina Tanaka") 
         -->
-            <h3> <?= $A->nome ?> </h3>
+            <h3> <?= $A -> nome ?> </h3>
         
             <!-- 2ª Versão simplificada -->
             <h3><?=$B->nome?></h3>
