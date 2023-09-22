@@ -22,17 +22,27 @@
 <?php 
     // Classe
         require_once 'src/Cliente.php';
+        $A = new Cliente;    
 
     // O codigo abaixo de atribuição manual dará erro pois nossa propriedade é privada (podemos mexer APENAS dentro da classe)
-    //    $A = new Cliente;    
     //    $A->nome = "Marina Tanaka"
+
+
+    // - Exemplos dos metodos setter e getter -
+    // *Obs. abaixo tem a tradução do getter e setter
+    // Getter - GET - (pegar/obter)
+    // Setter - SET - (atribuir/definir) 
+
+    // Usando set(setter) para atribuir um valor à propriedade privada "nome".
+        $A->setNome('Marina Tanaka'); 
 ?>
-  
+    <pre>
+        <?=var_dump($A)?>
+    </pre>
 
+    
+    
 
-
-
-  <!-- Teste -->
 
 
 </body>

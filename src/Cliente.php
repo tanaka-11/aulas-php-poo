@@ -8,4 +8,8 @@ class Cliente {
     private string $email;
     private string $senha;
     
+    // Métodos getters e setters (com atribuição simples)
+    public function setNome(string $valorDoNome):void {
+        $this->nome = $valorDoNome;
+    }
 }
