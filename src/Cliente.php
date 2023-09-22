@@ -1,22 +1,22 @@
 <?php
-//  - Criando a class(classe) "Cliente" via PHP -
+//  - Criando a class(classe) "Cliente" via PHP POO
   
 // *Obs. Classes SEMPRE começam com a letra maiuscula.
 class Cliente {
     // - Criando Propriedades(Variaveis) baseadas nos dados do diagrama -
     public string $nome;
-    // Alternativa dando valor padrão como "Não Informado" caso não seja atribuido um dado neste caso, o email.
-    public string $email = "Não Informado";
+    public string $email;
     public string $senha;
     public array $telefones;
     
-    // - Criando Métodos(Funções) baseados nos dados do diagrama -
-    //                           :void(Não retorna dados apenas exibe nossos dados)
-    public function exibirDados():void {
-        echo "<section>";
-        // $this é uma referencia direta a classe que estamos utilizando.
-        echo "<h2>$this->nome</h2>";
-        echo "<h2>$this->email</h2>";
-        echo "</section>";
+    // Método construtor (__construct) permite você configurar uma forma de inicialização do objeto, exigindo a atribuição de dados no momento de criar o objeto.
+    // *Obs. O construtor é SEMPRE chamado de maneira automatica assim que o objeto for criado.
+
+    // Passando parâmetros(NÃO é a mesma coisa que variavel) dentro do __construct e sua indução de dados
+    public function __construct(string $nome, string $email) {
+        // - Atribuindo valores dos parâmetros às propriedades(variaveis) - 
+        // *Obs. Usamos o "$this" para acessar as propriedades desta Classe.
+        $this->nome = $nome;
+        $this->email = $email;
     }
 }
