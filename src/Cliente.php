@@ -8,8 +8,15 @@ class Cliente {
     private string $email;
     private string $senha;
     
-    // Métodos getters e setters (com atribuição simples)
+    // - Métodos getters e setters (com atribuição simples) -
+
+    // Metodo set onde TEMOS que passar parametro
     public function setNome(string $valorDoNome):void {
         $this->nome = $valorDoNome;
+    }
+
+    // Metodo get onde NÃO precisamos passar parametro
+    public function getNome():string {
+        return $this->nome;
     }
 }
