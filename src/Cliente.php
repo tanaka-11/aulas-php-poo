@@ -10,8 +10,7 @@ class Cliente {
     public array $telefones;
     
     // - Criando Métodos(Funções) baseados nos dados do diagrama -
-
-    //                            void(Não retorna)
+    //                           :void(Não retorna dados)
     public function exibirDados():void {
         
     }
