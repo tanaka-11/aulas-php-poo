@@ -58,6 +58,25 @@
         
             <!-- 2ª Versão simplificada -->
             <h3><?=$B->nome?></h3>
+
+            <!-- 3º exemplo de saida simples-->
+            <p>E-mail - <?=$A->email?></p>
+            <hr>
+
+            <!-- Exemplo de saida simples de um array -->
+            <p>Telefones - <?=$A->telefones[0]?></p>
+            <p>Telefones - <?=$A->telefones[1]?></p>
+
+            <!-- Exemplo de saida de um array com o implode() -->
+            <p>Telefones- <?=implode(', ' , $A -> telefones )?></p>
+
+            <!-- Exemplo de saida de um array utilizando loop -->
+            <ul>
+                <?php foreach($A->telefones as $telefone){ ?>
+                    <li><?=$telefone?></li>
+                <?php } ?>
+            </ul>
+
     <hr>
     <!-- Teste -->
     <h3>Teste</h3>
