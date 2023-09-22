@@ -26,11 +26,17 @@
         <li>
             Chamada de método(fuction)
         </li>
+
+        <li>
+            Uso da palavra chave "this" que se refere a classe
+        </li>
     </ul>
 
 <?php 
+    // Classe:
     require_once 'src/Cliente.php';
     
+    // Objetos:
     $A = new Cliente;
     $B = new Cliente; 
   
@@ -44,6 +50,7 @@
 
     // Email
     $A -> email = "mtanakasg@gmail.com";
+    
     
     // Criptografando a senha com "password_hash"
     $A -> senha = password_hash("batata_quente", PASSWORD_DEFAULT)
@@ -77,7 +84,13 @@
                 <?php } ?>
             </ul>
 
-    <hr>
+            <hr>
+            
+    <h2>Acessando dados através de um método(função)</h2>
+        <p><?=$A->exibirDados()?></p>
+        <p><?=$B->exibirDados()?></p>
+
+
     <!-- Teste -->
     <h3>Teste</h3>
     <pre><?=var_dump($A, $B)?></pre>        

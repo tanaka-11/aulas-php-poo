@@ -5,13 +5,18 @@
 class Cliente {
     // - Criando Propriedades(Variaveis) baseadas nos dados do diagrama -
     public string $nome;
-    public string $email;
+    // Alternativa dando valor padrão como "Não Informado" caso não seja atribuido um dado neste caso, o email.
+    public string $email = "Não Informado";
     public string $senha;
     public array $telefones;
     
     // - Criando Métodos(Funções) baseados nos dados do diagrama -
-    //                           :void(Não retorna dados)
+    //                           :void(Não retorna dados apenas exibe nossos dados)
     public function exibirDados():void {
-        
+        echo "<section>";
+        // $this é uma referencia direta a classe que estamos utilizando.
+        echo "<h2>$this->nome</h2>";
+        echo "<h2>$this->email</h2>";
+        echo "</section>";
     }
 }
