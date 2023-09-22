@@ -28,7 +28,7 @@
         </li>
 
         <li>
-            Uso da palavra chave "this" que se refere a classe
+            Uso da palavra chave <code>"this"</code> para acessar recursos dentro da própria classe (this se refere a classe)
         </li>
     </ul>
 
@@ -50,7 +50,7 @@
 
     // Email
     $A -> email = "mtanakasg@gmail.com";
-    
+
     
     // Criptografando a senha com "password_hash"
     $A -> senha = password_hash("batata_quente", PASSWORD_DEFAULT)
