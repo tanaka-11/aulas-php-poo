@@ -19,4 +19,27 @@ class Cliente {
     public function getNome():string {
         return $this->nome;
     }
+
+    // SET Email e Sanitização
+    public function setEmail(string $email):void {
+        $this->email = filter_var($email, FILTER_SANITIZE_EMAIL);
+    }
+
+    // Retornando dados obtidos do email
+    public function getEmail():string {
+        return $this->email;
+    }
+
+
+
+    // SET senha e Sanitização
+    public function setSenha(string $senha):void {
+        $this->senha = password_hash($senha, PASSWORD_DEFAULT);
+    }
+
+    // GET senha (retornando valor)
+    public function getSenha():string {
+        return $this->senha;
+    }
+
 }

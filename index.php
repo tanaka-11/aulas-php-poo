@@ -32,11 +32,15 @@
     // Getter - GET - (pegar/obter) - NÃO recebe parametro
     // Setter - SET - (atribuir/definir) - RECEBE parametro
 
-    // Usando set(setter) para atribuir um valor à propriedade privada "nome".
+    // Usando set(setter) para atribuir um valor à propriedade privada "nome" "email" e "senha".
         $A->setNome('Marina Tanaka'); 
+        $A->setEmail('mtanakasg@gmail.com');
+        $A->setSenha('batata');
 ?>
     <!-- Usando o getter para ler/acessar dados privados da propiedade "nome" onde atribuimos seu valor no set -->
         <p>Nome: <?=$A->getNome()?></p>
+        <p>Email: <?=$A->getEmail()?></p>
+        <p>Senha: <?=$A->getSenha()?></p>
 
     <hr>
     <!-- Teste -->
