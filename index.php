@@ -45,7 +45,7 @@
     // Email
     $A -> email = "mtanakasg@gmail.com";
     
-    // Criptografando a senha com "passoword_hash"
+    // Criptografando a senha com "password_hash"
     $A -> senha = password_hash("batata_quente", PASSWORD_DEFAULT)
 ?>
     <hr>
