@@ -38,10 +38,23 @@ $clientePF->setIdade(21);
 
 // Colocando cpf (PF)
 $clientePF->setCpf("503-077-318-31");
+
+
+// Importando a sub-classe "PessoaJuridica" e criação do objeto.
+require_once 'src/PessoaJuridica.php';
+$clientePJ = new PessoaJuridica;
+
+// Atribuindo valores (set)
+$clientePJ->setNome("Tanaka S/A");
+$clientePJ->setEmail("Huttenloucher@gmail.com");
+$clientePJ->setAnoFundacao(2010);
+$clientePJ->setCnpj("32.088.0001/000.41");
+$clientePJ->setNomeFantasia("Tanaka Informática");
+
 ?>
 
     <!-- Teste -->
-    <pre> <?=var_dump($clientePF)?> </pre>
+    <pre> <?=var_dump($clientePF, $clientePJ)?> </pre>
 </body>
 
 </html>
