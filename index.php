@@ -16,7 +16,7 @@
     
     <ul>
        <li>Herança(Super Classe e Sub Classe)</li>
-       <!-- <li></li> -->
+       <li>Métodos/Propriedades PROTEGIDOS ou seja são acessíveis apenas pela classe em que foram definidos e suas sub-classes.</li>
     </ul>
 
 <?php
