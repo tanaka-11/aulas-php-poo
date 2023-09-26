@@ -30,8 +30,6 @@ class Cliente {
         return $this->email;
     }
 
-
-
     // SET senha e Sanitização
     public function setSenha(string $senha):void {
         $this->senha = password_hash($senha, PASSWORD_DEFAULT);
