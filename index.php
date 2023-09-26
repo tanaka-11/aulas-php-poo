@@ -17,9 +17,13 @@
     <ul>
        <li>Herança(Super Classe e Sub Classe)</li>
        <li>Métodos/Propriedades PROTEGIDOS ou seja são acessíveis apenas pela classe em que foram definidos e suas sub-classes.</li>
+       <li>Classe Abstrata</li>
+       <li>Classe Final</li>
     </ul>
 
 <?php
+
+// PESSOA FISICA
 // Importando a sub-classe "PessoaFisica".
 require_once 'src/PessoaFisica.php';
 
@@ -40,6 +44,7 @@ $clientePF->setIdade(21);
 $clientePF->setCpf("503-077-318-31");
 
 
+// PESSOA JURIDICA
 // Importando a sub-classe "PessoaJuridica" e criação do objeto.
 require_once 'src/PessoaJuridica.php';
 $clientePJ = new PessoaJuridica;
@@ -53,8 +58,20 @@ $clientePJ->setNomeFantasia("Tanaka Informática");
 
 ?>
 
-    <!-- Teste -->
+    <!-- Teste PF e PJ -->
     <pre> <?=var_dump($clientePF, $clientePJ)?> </pre>
+    <hr>
+
+    <!-- Criando um cliente generico com a nossa Super-Classe "Cliente" -->
+<?php
+// Importando a Super-Classe
+require_once 'src/Cliente.php';
+
+// Criando um objeto
+$clienteGenerico = new Cliente;
+
+?>
+    <pre> <?=var_dump($clienteGenerico)?> </pre>    
 </body>
 
 </html>
