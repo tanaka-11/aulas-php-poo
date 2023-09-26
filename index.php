@@ -19,7 +19,17 @@
        <!-- <li></li> -->
     </ul>
 
+<?php
+// Importando a sub-classe "PessoaFisica".
+require_once 'src/PessoaFisica.php';
 
+// Criação do objeto.
+$clientePF = new PessoaFisica
+
+?>
+
+    <!-- Teste -->
+    <pre> <?=var_dump($clientePF)?> </pre>
 </body>
 
 </html>
