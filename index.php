@@ -43,6 +43,7 @@
         <p>Senha: <?=$A->getSenha()?></p>
 
     <hr>
+    
     <!-- Teste -->
     <pre>
         <?=var_dump($A)?>
