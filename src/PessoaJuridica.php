@@ -8,6 +8,12 @@ class PessoaJuridica extends Cliente {
     private string $cnpj;
     private string $nomeFantasia;
 
+    // Acessando o método setter PROTEGIDO (existente na super-classe Cliente)
+    public function __construct()
+    {
+        $this->setSituacao("Em análise");
+    }
+
     // Getter e Setter via Extensão (Ano Fundação)
     public function getAnoFundacao(): int
     {

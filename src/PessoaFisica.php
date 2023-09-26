@@ -1,7 +1,7 @@
 <?php
 // SEMPRE começar uma classe com letra maiuscula !
 
-// Importando a super classe "Cliente" para conseguir usando o extends na nossa Sub Classe "PessoaFisica"
+// Importando a super classe "Cliente" para conseguir usar o extends na nossa Sub Classe "PessoaFisica"
 require_once 'Cliente.php';
 
 // Usando a palavra chave "extends" junto com o nome da classe que você quer HERDAR os recursos
@@ -9,6 +9,12 @@ class PessoaFisica extends Cliente{
     private int $idade;
     private string $cpf;
 
+    
+    // Passando o metodo construct
+    public function __construct()
+    {
+       $this->setSituacao("Normal");
+    }
 
     // Get e Set criado pela extensão php8 getters and setter (IDADE)
     public function getIdade(): int

@@ -7,6 +7,7 @@ class Cliente {
     private string $nome;
     private string $email;
     private string $senha;
+    private string $situacao = "A definir";
     
     // - Métodos getters e setters (com atribuição simples) -
 
@@ -40,4 +41,16 @@ class Cliente {
         return $this->senha;
     }
 
+    // Getter e Setter (SITUACAO): utilizamos o "Protected" o que significa que eles so poderão ser utilizados APENAS na super-classe(Cliente) e suas sub-classes(PessoaJuridica e PessoaFisica).
+    protected function getSituacao(): string
+    {
+        return $this->situacao;
+    }
+
+    protected function setSituacao(string $situacao): self
+    {
+        $this->situacao = $situacao;
+
+        return $this;
+    }
 }
