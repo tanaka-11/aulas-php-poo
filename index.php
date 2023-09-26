@@ -17,8 +17,8 @@
     <ul>
        <li>Herança(Super Classe e Sub Classe)</li>
        <li>Métodos/Propriedades PROTEGIDOS ou seja são acessíveis apenas pela classe em que foram definidos e suas sub-classes.</li>
-       <li>Classe Abstrata</li>
-       <li>Classe Final</li>
+       <li>Classe Abstrata: Não permitido istâncias/objetos, ou seja, serve apenas para modelo de sub-classes</li>
+       <li>Classe Final: Não permite herança, ou seja, não aceita a criação de sub-classes</li>
     </ul>
 
 <?php
@@ -62,7 +62,23 @@ $clientePJ->setNomeFantasia("Tanaka Informática");
     <pre> <?=var_dump($clientePF, $clientePJ)?> </pre>
     <hr>
 
-    <!-- Criando um cliente generico com a nossa Super-Classe "Cliente" -->
+<?php
+// Importando e criando o objeto de mei.
+require_once 'src/MEI.php';
+$clienteMEI = new MEI;
+
+
+$clienteMEI->setNome("Marina Tanaka");
+$clienteMEI->setAnoFundacao(2023);
+$clienteMEI->setNomeFantasia("Tanaka Empreendimentos");
+$clienteMEI->setAreaDeAtuacao("Ervas medicinais");
+
+?>
+
+<!-- Teste da sub-classe MEI herdada da sub-classe PessoaJuridica -->
+    <pre> <?=var_dump($clienteMEI)?> </pre>
+
+    <!-- Criando um objeto generico com a nossa Super-Classe "Cliente", o codigo abaixo dara erro pois a classe "Cliente" se trata de uma classe abstrata -->
 <?php
 // Importando a Super-Classe
 require_once 'src/Cliente.php';
@@ -72,6 +88,8 @@ $clienteGenerico = new Cliente;
 
 ?>
     <pre> <?=var_dump($clienteGenerico)?> </pre>    
+
+
 </body>
 
 </html>
