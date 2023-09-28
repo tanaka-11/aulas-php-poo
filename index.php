@@ -24,28 +24,19 @@
 <?php
 
 // PESSOA FISICA
-// Importando a sub-classe "PessoaFisica".
 require_once 'src/PessoaFisica.php';
 
 // Criação do objeto.
 $clientePF = new PessoaFisica;
 
-// Colocando um nome no Cliente(PF)
+// Atribuindo valores (set)
 $clientePF->setNome("Marina Tanaka");
-// $clientePF->nome = "Marina Tanaka"; (Está linha inves de adicionar o nome nos dados ja existente ele cria uma nova propriedade com o valor passado). NÃO UTILIZAR POIS É UM ERRO NO PROPRIO PHP.
-
-//Colocando um email no Cliente(PF)
 $clientePF->setEmail("mtanakasg@gmail.com");
-
-// Colocando idade (PF)
 $clientePF->setIdade(21);
-
-// Colocando cpf (PF)
 $clientePF->setCpf("503-077-318-31");
 
 
 // PESSOA JURIDICA
-// Importando a sub-classe "PessoaJuridica" e criação do objeto.
 require_once 'src/PessoaJuridica.php';
 $clientePJ = new PessoaJuridica;
 
@@ -58,10 +49,14 @@ $clientePJ->setNomeFantasia("Tanaka Informática");
 
 ?>
 
-    <!-- Teste PF e PJ -->
-    <pre> <?=var_dump($clientePF, $clientePJ)?> </pre>
     <hr>
+    <h2>Saída de Dados</h2>
 
+    <!-- Cliente PF -->
+    <section> <?=$clientePF->exibirDados()?> </section>
+
+    <!-- Cliente PJ -->
+    <section> <?=$clientePJ->exibirDados()?> </section>
 
 </body>
 
