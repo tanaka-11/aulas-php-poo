@@ -5,20 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Exemplo 05 - PHP POO</title>
+    <title>Exemplo 06 - PHP POO</title>
 
 </head>
 <body>
-    <h1>PHP com POO - Exemplo 05</h1>
+    <h1>PHP com POO - Exemplo 06</h1>
     <hr>
 
     <h2>Assuntos abordados:</h2>
     
     <ul>
-       <li>Herança(Super Classe e Sub Classe)</li>
-       <li>Métodos/Propriedades PROTEGIDOS ou seja são acessíveis apenas pela classe em que foram definidos e suas sub-classes.</li>
-       <li>Classe Abstrata: Não permitido istâncias/objetos, ou seja, serve apenas para modelo de sub-classes</li>
-       <li>Classe Final: Não permite herança, ou seja, não aceita a criação de sub-classes</li>
+       <li>Polimorfismo: O polimorfismo vai priorizar a sub-classe numa chamada.</li>
     </ul>
 
 <?php

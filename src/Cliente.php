@@ -15,7 +15,7 @@ abstract class Cliente {
     public function exibirDados(): void {
         echo "<h3>Método <b>(exibirDados)</b> - Super-Classe Cliente</h3>";
         // Chamando o nome com get e concatenação.
-        // echo "<h3>.{$this->getNome}.</h3>";
+        // echo "<h3>".$this->getNome()."</h3>";
 
         // Chamando o nome com a acesso direto.
         echo "<h4> $this->nome </h4>";
