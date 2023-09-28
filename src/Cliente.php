@@ -11,19 +11,10 @@ abstract class Cliente {
     private string $senha;
     private string $situacao = "A definir";
 
-    // Criando metodo para exibir os dados dos clientes
+    // Criando metodo para exibir os dados dos CLIENTES
     public function exibirDados(): void {
-        echo "<h3>Método <b>(exibirDados)</b> - Super-Classe Cliente</h3>";
-        // Chamando o nome com get e concatenação.
-        // echo "<h3>".$this->getNome()."</h3>";
-
-        // Chamando o nome com a acesso direto.
-        echo "<h4> $this->nome </h4>";
-
-        // Situação
-        echo "<p>Situação: $this->situacao </p>";
-
-        echo "<hr>";
+        echo "<h3>".$this->getNome()."</h3>";
+        echo "<p>Situação:". $this->getSituacao(). "</p>";
     }
     
     // - Métodos getters e setters (com atribuição simples) -

@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Exemplo 06 - PHP POO</title>
+    <title>Exemplo 07 - PHP POO</title>
 
 </head>
 <body>
-    <h1>PHP com POO - Exemplo 06</h1>
+    <h1>PHP com POO - Exemplo 07    </h1>
     <hr>
 
     <h2>Assuntos abordados:</h2>
     
     <ul>
-       <li>Polimorfismo: O polimorfismo vai priorizar a sub-classe numa chamada.</li>
+       <li>Polimorfismo</li>
+       <li>Sobreposição de metodos</li>
+       <li>Uso do <code>parent</code> para acessar a super-classe</li>
     </ul>
 
 <?php
@@ -46,8 +48,9 @@ $clientePJ->setNomeFantasia("Tanaka Informática");
 
 ?>
 
-    <hr>
+    
     <h2>Saída de Dados</h2>
+    <hr>
 
     <!-- Cliente PF -->
     <section> <?=$clientePF->exibirDados()?> </section>

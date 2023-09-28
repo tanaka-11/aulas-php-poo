@@ -17,20 +17,10 @@ class PessoaJuridica extends Cliente {
     // Método exibirDados (construct sempre vem antes).
     public function exibirDados(): void
     {
-        echo "<h3> Método <b>(exibirDados)</b> - Sub-Classe PessoaJuridica </h3>";
-        // Chamando o nome com get e concatenação.
-         echo "<h4>".$this->getNome()."</h4>";
-
-        // Por se tratar de uma sub-classe a chamada direta não ira funcionar.
-        // echo "<h4> $this->nome </h4>";
-
-        // Situação
-        echo "<p>Situação:".$this->getSituacao()."</p>";
-
-        // Nome Fantasia
-        echo "<p> Nome Fantasia: ".$this->nomeFantasia."</p>";
-
-        echo "<hr>";
+        // Palavra chave (parent::) permite acesso aos recuros da super-classe.
+        parent::exibirDados();
+        // echo "<p>Nome Fantasia: $this-></p>";
+        echo "<p>Nome Fantasia: $this->nomeFantasia</p>";
     }
 
     // Getter e Setter via Extensão (Ano Fundação)
