@@ -62,33 +62,6 @@ $clientePJ->setNomeFantasia("Tanaka Informática");
     <pre> <?=var_dump($clientePF, $clientePJ)?> </pre>
     <hr>
 
-<?php
-// Importando e criando o objeto de mei.
-require_once 'src/MEI.php';
-$clienteMEI = new MEI;
-
-
-$clienteMEI->setNome("Marina Tanaka");
-$clienteMEI->setAnoFundacao(2023);
-$clienteMEI->setNomeFantasia("Tanaka Empreendimentos");
-$clienteMEI->setAreaDeAtuacao("Ervas medicinais");
-
-?>
-
-<!-- Teste da sub-classe MEI herdada da sub-classe PessoaJuridica -->
-    <pre> <?=var_dump($clienteMEI)?> </pre>
-
-    <!-- Criando um objeto generico com a nossa Super-Classe "Cliente", o codigo abaixo dara erro pois a classe "Cliente" se trata de uma classe abstrata -->
-<?php
-// Importando a Super-Classe
-require_once 'src/Cliente.php';
-
-// Criando um objeto
-$clienteGenerico = new Cliente;
-
-?>
-    <pre> <?=var_dump($clienteGenerico)?> </pre>    
-
 
 </body>
 
