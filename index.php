@@ -22,7 +22,7 @@
 
 <?php
 // Sintaxe passando as classes numa unica linha.
-use Clientes\{PessoaFisica, PessoaJuridica, MEI};
+use Clientes\{PessoaFisica, PessoaJuridica, MEI, Escola};
 
 // Sintaxe passando as classes individualmente
 use Fornecedor\Pagamento;
@@ -35,12 +35,15 @@ require_once 'vendor/autoload.php';
 $clienteFisico = new PessoaFisica;
 $clienteJuridico = new PessoaJuridica;
 $clienteMEI = new MEI;
+
 $pagamentoFornecedor = new Pagamento;
 $pagamentoPrestador = new PrestadorPagamento;
 
+$clienteEstudante = new Escola;
+
 ?>
     <!-- Teste -->
-    <pre> <?=var_dump($pagamentoFornecedor, $pagamentoPrestador)?> </pre>
+    <pre> <?=var_dump($pagamentoFornecedor, $pagamentoPrestador, $clienteEstudante)?> </pre>
     <hr>
 
 <?php
