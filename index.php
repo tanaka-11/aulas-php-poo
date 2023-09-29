@@ -20,6 +20,11 @@
        <li>Configuração e utilização do <code>namespaces</code> e <code>alias</code> </li>
     </ul>
 
+<?php
+// Quando tentamos fazer o require de duas classes com o mesmo nome, ele acaba dando erro no servidor por não permitir que ambos terem o mesmo nome, neste caso iremos utilizar o namespaces
+require_once 'src/fornecedores/Pagamento.php';
+require_once 'src/prestadores/Pagamento.php';
+?>
     
 </body>
 
