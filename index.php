@@ -23,7 +23,7 @@
 <?php
 // Quando tentamos fazer o require de duas classes com o mesmo nome, ele acaba dando erro no servidor por não permitir que ambos terem o mesmo nome, neste caso iremos utilizar o namespaces para cada classe ter um espaço diferente na memoria.
 
-// Adicionado automaticamente por conta da 3ª versão utilizando o use, ele sempre vai ir automaticamente para cima dos requires.
+// Adicionado automaticamente por conta da (3ª versão) utilizando o use, ele sempre vai ir automaticamente para cima dos requires.
 use Fornecedor\Pagamento;
 use Prestador\Pagamento as PrestadorPagamento;
 
@@ -31,12 +31,10 @@ require_once 'src/fornecedores/Pagamento.php';
 require_once 'src/prestadores/Pagamento.php';
 
 // 1ª versão criando objetos com namespace:
-
 // $pagamentoFornecedor = new Fornecedor\Pagamento;
 // $pagamentoPrestador = new Prestador\Pagamento;
 
 // 2ª versão criando objetos com namespace com a palavra chave "use" e "as" para prevenção de conflitos:
-
 // use Fornecedor\Pagamento;
 // use Prestador\Pagamento as PrestadorPagamento;
 
@@ -51,7 +49,7 @@ $pagamentoPrestador = new PrestadorPagamento;
 
 ?>
     <pre> <?=var_dump($pagamentoFornecedor, $pagamentoPrestador)?> </pre>
-
+    <hr>
 </body>
 
 </html>
