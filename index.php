@@ -26,10 +26,17 @@ require_once 'src/fornecedores/Pagamento.php';
 require_once 'src/prestadores/Pagamento.php';
 
 // 1ª versão criando objetos com namespace
-$pagamentoFornecedor = new Fornecedor\Pagamento;
-$pagamentoPrestador = new Prestador\Pagamento;
+// $pagamentoFornecedor = new Fornecedor\Pagamento;
+// $pagamentoPrestador = new Prestador\Pagamento;
 
-// 2ª versão criando objetos com namespace
+// 2ª versão criando objetos com namespace com a palavra chave "use" e "as" para prevenção de conflitos
+use Fornecedor\Pagamento;
+use Prestador\Pagamento as PrestadorPagamento;
+
+// Objeto sem o alias "AS"
+$pagamentoFornecedor = new Pagamento;
+// Utilizando o alias "AS"
+$pagamentoPrestador = new PrestadorPagamento;
 
 ?>
     <pre> <?=var_dump($pagamentoFornecedor, $pagamentoPrestador)?> </pre>
