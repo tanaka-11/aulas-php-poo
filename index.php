@@ -28,14 +28,8 @@ use Clientes\{PessoaFisica, PessoaJuridica, MEI};
 use Fornecedor\Pagamento;
 use Prestador\Pagamento as PrestadorPagamento;
 
-// Fazendo os requires (Clientes)
-require_once 'src/PessoaFisica.php';
-require_once 'src/PessoaJuridica.php';
-require_once 'src/MEI.php';
-
-// Fazendo os requires (Fornecedores/Prestadores)
-require_once 'src/fornecedores/Pagamento.php';
-require_once 'src/prestadores/Pagamento.php';
+// Fazendo os requires com o composer autoload inves de passa-los individualmente
+require_once 'vendor/autoload.php';
 
 // Criação dos objetos
 $clienteFisico = new PessoaFisica;

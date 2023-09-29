@@ -2,9 +2,6 @@
 // Passando um namespace
 namespace Clientes;
 
-// Importando a super classe "Cliente" para conseguir usar o extends na nossa Sub Classe "PessoaFisica"
-require_once 'Cliente.php';
-
 // Usando a palavra chave "extends" junto com o nome da classe que você quer HERDAR os recursos utilizando tambem a palavra-chave final para determinar que está classe não pode ser extendida em sub-classes
 final class PessoaFisica extends Cliente{
     private int $idade;

@@ -1,9 +1,5 @@
 <?php
-
 namespace Clientes;
-
-// Importando a super classe "Cliente"
-require_once 'Cliente.php';
 
 // Criando a sub classe "Pessoa Juridica" utilizando a palavra chave "extends"
 class PessoaJuridica extends Cliente {
