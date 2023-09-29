@@ -5,72 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Exemplo 09 - PHP POO</title>
+    <title>Exemplo 10 - PHP POO</title>
 
 </head>
 <body>
-    <h1>PHP com POO - Exemplo 09</h1>
+    <h1>PHP com POO - Exemplo 10</h1>
     <hr>
 
     <h2>Assuntos abordados:</h2>
     
     <ul>
-       <li>Namespaces - Agrupamento e organização de recursos (classes, funções, constantes)</li>
-       <li>Finalidade - Prevenção de conflitos de classes com o mesmo nome</li>
-       <li>Configuração e utilização do <code>namespaces</code> e <code>alias</code> </li>
+       <li>Composer - Gerenciador de dependência PHP</li>
+       <li>Configurar o projeto com Composer usando <code>composer.json</code></li>
+       <li>Autoload de classes evitando muitos requires ou requires manuais</li>
     </ul>
 
 <?php
-// Quando tentamos fazer o require de duas classes com o mesmo nome, ele acaba dando erro no servidor por não permitir que ambos terem o mesmo nome, neste caso iremos utilizar o namespaces para cada classe ter um espaço diferente na memoria.
-
-// Adicionado automaticamente por conta da (3ª versão) utilizando o use, ele sempre vai ir automaticamente para cima dos requires.
-use Fornecedor\Pagamento;
-use Prestador\Pagamento as PrestadorPagamento;
-
-require_once 'src/fornecedores/Pagamento.php';
-require_once 'src/prestadores/Pagamento.php';
-
-// 1ª versão criando objetos com namespace:
-// $pagamentoFornecedor = new Fornecedor\Pagamento;
-// $pagamentoPrestador = new Prestador\Pagamento;
-
-// 2ª versão criando objetos com namespace com a palavra chave "use" e "as" para prevenção de conflitos e simplificação dos objetos:
-// use Fornecedor\Pagamento;
-// use Prestador\Pagamento as PrestadorPagamento;
-
-// Objeto sem o alias "AS":
-// $pagamentoFornecedor = new Pagamento;
-// Utilizando o alias "AS":
-// $pagamentoPrestador = new PrestadorPagamento;
-
-// 3ª versão utilizando o metodo automatico do VScode.
-$pagamentoFornecedor = new Pagamento;
-$pagamentoPrestador = new PrestadorPagamento;
-
-?>
-    <pre> <?=var_dump($pagamentoFornecedor, $pagamentoPrestador)?> </pre>
-    <hr>
-
-    <!-- Mini-exercicio para criação de objetos com "namespaces" nas classes que ja tinhamos, passando dados usando setters e exibição destes dados -->
-<?php
-
-// Passando os "use" das classes de maneira individual. 
-// use Clientes\PessoaFisica;
-// use Clientes\PessoaJuridica;
-// use Clientes\MEI;
-
 // Sintaxe passando as classes numa unica linha.
 use Clientes\{PessoaFisica, PessoaJuridica, MEI};
 
-// Fazendo os requires
+// Sintaxe passando as classes individualmente
+use Fornecedor\Pagamento;
+use Prestador\Pagamento as PrestadorPagamento;
+
+// Fazendo os requires (Clientes)
 require_once 'src/PessoaFisica.php';
 require_once 'src/PessoaJuridica.php';
 require_once 'src/MEI.php';
+
+// Fazendo os requires (Fornecedores/Prestadores)
+require_once 'src/fornecedores/Pagamento.php';
+require_once 'src/prestadores/Pagamento.php';
 
 // Criação dos objetos
 $clienteFisico = new PessoaFisica;
 $clienteJuridico = new PessoaJuridica;
 $clienteMEI = new MEI;
+$pagamentoFornecedor = new Pagamento;
+$pagamentoPrestador = new PrestadorPagamento;
+
+?>
+    <!-- Teste -->
+    <pre> <?=var_dump($pagamentoFornecedor, $pagamentoPrestador)?> </pre>
+    <hr>
+
+<?php
 
 // Adicionado valores com set
 $clienteFisico->setNome("Marina Tanaka");
