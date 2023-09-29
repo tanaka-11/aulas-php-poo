@@ -34,7 +34,7 @@ require_once 'src/prestadores/Pagamento.php';
 // $pagamentoFornecedor = new Fornecedor\Pagamento;
 // $pagamentoPrestador = new Prestador\Pagamento;
 
-// 2ª versão criando objetos com namespace com a palavra chave "use" e "as" para prevenção de conflitos:
+// 2ª versão criando objetos com namespace com a palavra chave "use" e "as" para prevenção de conflitos e simplificação dos objetos:
 // use Fornecedor\Pagamento;
 // use Prestador\Pagamento as PrestadorPagamento;
 
@@ -54,10 +54,13 @@ $pagamentoPrestador = new PrestadorPagamento;
     <!-- Mini-exercicio para criação de objetos com "namespaces" nas classes que ja tinhamos, passando dados usando setters e exibição destes dados -->
 <?php
 
-// Passando os "use" das classes. 
-use Clientes\PessoaFisica;
-use Clientes\PessoaJuridica;
-use Clientes\MEI;
+// Passando os "use" das classes de maneira individual. 
+// use Clientes\PessoaFisica;
+// use Clientes\PessoaJuridica;
+// use Clientes\MEI;
+
+// Sintaxe passando as classes numa unica linha.
+use Clientes\{PessoaFisica, PessoaJuridica, MEI};
 
 // Fazendo os requires
 require_once 'src/PessoaFisica.php';
