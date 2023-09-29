@@ -50,6 +50,36 @@ $pagamentoPrestador = new PrestadorPagamento;
 ?>
     <pre> <?=var_dump($pagamentoFornecedor, $pagamentoPrestador)?> </pre>
     <hr>
+
+    <!-- Mini-exercicio para criação de objetos com "namespaces" nas classes que ja tinhamos, passando dados usando setters e exibição destes dados -->
+<?php
+
+// Passando os "use" das classes. 
+use Clientes\PessoaFisica;
+use Clientes\PessoaJuridica;
+use Clientes\MEI;
+
+// Fazendo os requires
+require_once 'src/PessoaFisica.php';
+require_once 'src/PessoaJuridica.php';
+require_once 'src/MEI.php';
+
+// Criação dos objetos
+$clienteFisico = new PessoaFisica;
+$clienteJuridico = new PessoaJuridica;
+$clienteMEI = new MEI;
+
+// Adicionado valores com set
+$clienteFisico->setNome("Marina Tanaka");
+$clienteJuridico->setNome("Vinicius Miranda");
+$clienteMEI->setNome("Luis Fernando");
+?>
+    <!-- Exibindo dados do objeto  -->
+    <p><b>Nome Cliente Fisico:</b> <?=$clienteFisico->getNome()?> </p>
+    <p><b>Nome Cliente Juridico:</b> <?=$clienteJuridico->getNome()?> </p>
+    <p><b>Nome Cliente Fisico:</b> <?=$clienteMEI->getNome()?> </p>
+    <hr>
+
 </body>
 
 </html>
