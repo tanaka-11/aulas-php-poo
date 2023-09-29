@@ -1,9 +1,6 @@
 <?php
-//  - Criando a class(classe) "Cliente" via PHP POO
-  
-// *Obs. Classes SEMPRE começam com a letra maiuscula.
-
-// Utilizamos o abstract para obrigar o progamador a utilizar as "sub-classes" inves de usar a "super-classe" de forma direta, não é possivel criar um objeto a partir da super-classe, ela é usada apenas como modelo para as sub-classes ou seja ela não pode ser instanciada.
+// Criando um namespace para a nossa classe abstrata Cliente
+namespace Clientes;
 abstract class Cliente {
     // - Criando Propriedades(Variaveis) privadas, o que significa que não é possivel alterar dados fora da classe -
     private string $nome;

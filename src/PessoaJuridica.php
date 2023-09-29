@@ -1,4 +1,7 @@
 <?php
+
+namespace Clientes;
+
 // Importando a super classe "Cliente"
 require_once 'Cliente.php';
 

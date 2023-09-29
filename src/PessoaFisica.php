@@ -1,5 +1,6 @@
 <?php
-// SEMPRE começar uma classe com letra maiuscula !
+// Passando um namespace
+namespace Clientes;
 
 // Importando a super classe "Cliente" para conseguir usar o extends na nossa Sub Classe "PessoaFisica"
 require_once 'Cliente.php';
