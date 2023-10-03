@@ -56,7 +56,7 @@ $clienteMEI->setNome("Luis Fernando");
     <!-- Exibindo dados do objeto  -->
     <p><b>Nome Cliente Fisico:</b> <?=$clienteFisico->getNome()?> </p>
     <p><b>Nome Cliente Juridico:</b> <?=$clienteJuridico->getNome()?> </p>
-    <p><b>Nome Cliente Fisico:</b> <?=$clienteMEI->getNome()?> </p>
+    <p><b>Nome Cliente MEI:</b> <?=$clienteMEI->getNome()?> </p>
     <hr>
 
 </body>
